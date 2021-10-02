@@ -1,0 +1,485 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* roboto-regular - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/roboto-v29-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v29-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-condensed-regular - latin */
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/roboto-condensed-v19-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-condensed-v19-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+    --color-dark: #4d4d4d;
+    --color-light: #808080;
+    --color-accent: #5d71dd;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.product_wrapper {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    left: 0px;
+    top: 0px;
+
+    /* White */
+
+    background: #FFFFFF;
+    /* Border */
+
+
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.product__photo {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 30px;
+    top: 30px;
+
+    background: url(../img/hills_prescription_diet_gastrointestinal_biome_dog.png);
+    mix-blend-mode: normal;
+}
+
+.product__decor1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 6px 3px;
+
+    position: absolute;
+    z-index: 9999;
+    width: 83px;
+    height: 21px;
+    left: 17px;
+    top: 0px;
+
+    /* Purple */
+
+    background: #8D58E3;
+    border-radius: 3px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+
+.decor-text {
+    position: static;
+    height: 14px;
+    left: 6px;
+    top: 4px;
+
+    font-family: Roboto Condensed;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* White */
+
+    color: #FFFFFF;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 1px;
+}
+
+.product__decor2 {
+    /* Auto Layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 6px 3px;
+
+    position: absolute;
+    z-index: 9999;
+    width: 76px;
+    height: 21px;
+    left: 17px;
+    top: 27px;
+
+    /* Pink */
+
+    background: #E95471;
+    border-radius: 3px;
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 6px 0px;
+}
+
+.product__decor-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: calc(50% - 40px/2 + 121px);
+    top: 230px;
+
+    background: url(../img/pet.png);
+}
+
+.product__favorite {
+    position: absolute;
+    z-index: 9999;
+    width: 40px;
+    height: 40px;
+    right: 10px;
+    top: 9px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(48, 36, 84, 0.15);
+    border-radius: 20px;
+}
+
+.favorite_wrapper {
+    position: absolute;
+    width: 18px;
+    height: 16.8px;
+    left: calc(50% - 18px/2);
+    top: calc(50% - 16.8px/2 + 0.4px);
+
+}
+
+.favorite_button {
+  display:flex;
+   padding:0;
+   margin:0;
+   border:0;
+   border-radius:40px;
+   background-color:#FFFFFF;
+   overflow:hidden;
+}
+
+.product__title {
+    position: absolute;
+    height: 16px;
+    left: 0px;
+    right: 0px;
+    top: 276px;
+
+}
+
+.title-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    /* DarkBlue */
+
+    color: #202454;
+}
+
+.product__rating_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    position: absolute;
+    width: 95px;
+    height: 14px;
+    left: 0px;
+    top: 311px;
+}
+
+.rating-text {
+    position: static;
+    width: 25px;
+    height: 14px;
+    left: 70px;
+    top: 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+
+    /* DarkBlue */
+
+    color: #202454;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 5;
+    flex-grow: 0;
+    margin: 0px 0px;
+}
+
+.product__price_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 150px;
+    height: 47px;
+    left: 0px;
+    bottom: 12px;
+    top: 346px;
+}
+
+.product__buy-button_block {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    left: 212px;
+    top: 344px;
+    bottom: 13px;
+}
+
+.buy-button__wrapper {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 0px;
+    bottom: 0px;
+
+    /* White */
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(84, 143, 199, 0.15);
+    border-radius: 20px;
+}
+
+.buy-button {
+  display:flex;
+   padding:0;
+   margin:0;
+   border:0;
+   border-radius:40px;
+   background-color:#FFFFFF;
+   overflow:hidden;
+}
+
+.buy-button__element1 {
+    position: absolute;
+    text-align: center;
+    left: 27.09%;
+    right: 23.65%;
+    top: 4.83%;
+    bottom: 67.59%;
+
+
+}
+
+.buy-button__element2 {
+    position: absolute;
+    z-index: 9999;
+    text-align: center;
+    left: 8%;
+    right: 4.6%;
+    top: 30.86%;
+    bottom: 5.52%;
+
+    /* Blue */
+
+}
+
+.price-past {
+    position: static;
+    width: 96px;
+    height: 20px;
+    left: 0px;
+    top: 0px;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+
+.price-past__icon_wraper {
+    position: absolute;
+    left: 0%;
+    right: 86.67%;
+    top: 0%;
+    bottom: 57.45%;
+
+    /* Pink */
+
+    background: #E95471;
+    border-radius: 20px;
+}
+
+.price-past__icon {
+    position: absolute;
+    text-align: center;
+    left: 8.23%;
+    right: 4.37%;
+    top: 6.25%;
+    bottom: 6.25%;
+
+    /* White */
+
+
+}
+
+.price-past__text1 {
+    position: absolute;
+    left: 16%;
+    right: 36%;
+    top: 2.13%;
+    bottom: 59.57%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+
+
+    /* Gray_Txt */
+
+    color: #7B94B0;
+}
+
+.price-current_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 0px;
+
+    position: static;
+    width: 150px;
+    height: 23px;
+    left: 0px;
+    top: calc(50% - 23px/2 + 12px);
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 4px 0px;
+}
+
+.price-current__text {
+    position: static;
+    left: 36%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    /* DarkBlue */
+
+    color: #202454;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 0px 4px;
+}
+
+.price-past__text2 {
+    position: static;
+    left: 0%;
+    right: 66.67%;
+    top: 21.74%;
+    bottom: 0%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 140%;
+    /* or 18px */
+
+    text-decoration-line: line-through;
+
+    /* Gray_Txt */
+
+    color: #7B94B0;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 4px;
+
+}
